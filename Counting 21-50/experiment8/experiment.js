@@ -80,8 +80,8 @@ function initialiseObject() {
         bunch[i].scale.set(2,2,2);
         bunch[i].position.set(0-(i+1)/8,0,-2);
         bunch[i].rotation.set(0,0,0);
-        bunch[i].castShadow = true;
-        bunch[i].receiveShadow = true;
+        // bunch[i].castShadow = true;
+        // bunch[i].receiveShadow = false;
         PIEaddElement(bunch[i]);
     }    
 
@@ -166,7 +166,8 @@ function shower(right){
 
 function initialiseScene() {
 
-    PIEscene.background=new THREE.Color( 0xbfd1e5 );
+    // PIEscene.background=new THREE.Color( 0xbfd1e5 );
+    PIEscene.background = new THREE.TextureLoader().load("./assets/wood1.jpg", {}, function(){});
     PIEscene.add(new THREE.AmbientLight(0xffffff));
 
     scene2=new THREE.Scene();
@@ -187,16 +188,17 @@ function loadExperimentElements(){
     div = document.createElement("div");
     div.style.position = "absolute";
     div.innerHTML = "Count the MatchSticks";
-    div.backgroundColor = "#ffffff";
-    div.style.top = "20%";
+    div.style.top = "10%";
     div.style.left = "25%";
-    div.style.color = "blue";
+    div.style.color = "#ffffff";
     div.style.height = "10%";
     div.style.width = "50%";
     div.style.textAlign = "center";
+    div.style.verticalAlign = "center";
     div.style.fontSize = "50px";
     div.style.zIndex = "100";
-    div.style.fontFamily = "Arial";
+    div.style.fontFamily = "Oswald";
+    div.style.textShadow = "5px 2px #a93226 ";
     div.setAttribute('id', 'anim');
     document.body.appendChild(div);
     /* initialise help and info content */
@@ -340,6 +342,7 @@ function initialiseControls(){
     });
     PIEaddDisplayCommand("Verify", function() {
         document.getElementsByTagName('INPUT')[0].disabled = true;
+        countTill = 0;
         var j,k;
         for(var i=0;i<totalBunch;i++) {
             j=0;
