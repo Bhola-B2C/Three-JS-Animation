@@ -2,7 +2,7 @@
 [![HitCount](http://hits.dwyl.io/Bhola-B2C/Three-JS-Animation.svg)](http://hits.dwyl.io/Bhola-B2C/Three-JS-Animation)
 > A ThreeJS animation for eklavya (IIT Bombay intern)
 
-This repository contains 2 PIE animation (based on THREEjs). You may check the animations at https://Bhola-B2C.github.io/Three-JS-Animation .
+This repository contains 2 PIE animations (based on THREEjs). You may check the animations at https://Bhola-B2C.github.io/Three-JS-Animation .
 
 ## Usage
 
@@ -11,4 +11,4 @@ This repository contains 2 PIE animation (based on THREEjs). You may check the a
 
 ## Contributing
 
-Spot a bug? Open up an issue! Added a cool feature? Make a pull request!
+Head over [here](./CONTRIBUTING.md) for some guidelines.
